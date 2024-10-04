@@ -1,0 +1,586 @@
+/* Reset some default styles */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+/* Navbar Styles */
+
+.navbar {
+    background-color: #f8f9fa;
+    padding: 20px 25px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #007bff;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand img {
+    margin-right: 10px;
+}
+
+.navbar-toggler {
+    border: none;
+    outline: none;
+}
+
+.navbar-toggler-icon {
+    color: #343a40;
+}
+
+.navbar-nav .nav-link {
+    color: #343a40;
+    font-weight: 500;
+    padding: 8px 15px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #007bff;
+    background-color: rgba(0, 123, 255, 0.1);
+    border-radius: 5px;
+}
+
+
+/* Dropdown Styles */
+
+.navbar-nav .dropdown {
+    position: relative;
+}
+
+.navbar-nav .dropdown-toggle::after {
+    margin-left: 8px;
+}
+
+.navbar-nav .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f8f9fa;
+    border: none;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    display: none;
+    /* Hidden by default */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1000;
+}
+
+.navbar-nav .dropdown-menu.show {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+.navbar-nav .dropdown-item {
+    color: #343a40;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-nav .dropdown-item:hover {
+    background-color: rgba(0, 123, 255, 0.1);
+    color: #007bff;
+}
+
+
+/* Show dropdown on hover for larger screens */
+
+@media (min-width: 992px) {
+    .navbar-nav .dropdown:hover .dropdown-menu {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+
+/* Mobile Styles */
+
+@media (max-width: 992px) {
+    .navbar-nav {
+        text-align: center;
+    }
+    .navbar-nav .nav-item {
+        margin-bottom: 10px;
+    }
+    .navbar-nav .dropdown-menu {
+        position: static;
+        float: none;
+    }
+    .navbar-collapse {
+        margin-top: 10px;
+    }
+}
+
+
+/* Navbar background change on scroll */
+
+.navbar-scrolled {
+    background-color: #007bff;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-scrolled .nav-link,
+.navbar-scrolled .navbar-brand {
+    color: white !important;
+}
+
+.navbar-scrolled .navbar-nav .nav-link:hover {
+    color: #f8f9fa;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+/* Hero section styles */
+
+#hero {
+    position: relative;
+    height: 90vh;
+    overflow: hidden;
+}
+
+.hero-image {
+    position: relative;
+    height: 100%;
+}
+
+.hero-image img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+h1.display-4 {
+    font-size: 3rem;
+    /* Adjust size for visibility */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.btn-light {
+    background-color: #f8f9fa;
+    color: #007bff;
+}
+
+.btn-light:hover {
+    background-color: #e2e6ea;
+}
+
+
+/* Property Listings styles */
+
+#property-listings {
+    background-color: #f9f9f9;
+}
+
+.card {
+    transition: transform 0.2s;
+    /* Add a smooth hover effect */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+
+/* Pagination styles */
+
+.pagination {
+    margin: 2rem 0;
+}
+
+.page-link {
+    color: #007bff;
+}
+
+.page-link:hover {
+    text-decoration: underline;
+}
+
+
+/* Search/Filter Section styles */
+
+#search-filter {
+    background-color: #f2f2f2;
+}
+
+#search-filter h2 {
+    margin-bottom: 2rem;
+}
+
+.form-control,
+.form-select {
+    border-radius: 0.5rem;
+}
+
+
+/* Media queries for responsiveness */
+
+@media (max-width: 768px) {
+    #hero h1 {
+        font-size: 2.5rem;
+        /* Adjust for smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-nav {
+        text-align: center;
+        /* Center navbar items on small screens */
+    }
+    .btn-lg {
+        width: 100%;
+        /* Full width for buttons on smaller screens */
+    }
+}
+
+#about-company h2 {
+    font-size: 2.5rem;
+    /* Larger font size for the main heading */
+    color: #343a40;
+    /* Dark text color */
+    font-weight: bold;
+    /* Bold for emphasis */
+    margin-bottom: 30px;
+    /* Space below the heading */
+}
+
+#about-company h3 {
+    font-size: 2rem;
+    /* Font size for subheadings */
+    color: #007bff;
+    /* Bootstrap primary color */
+    margin-bottom: 20px;
+    /* Space below subheadings */
+}
+
+
+/* Company History and Mission */
+
+#about-company h4 {
+    font-size: 1.5rem;
+    /* Font size for history and mission headings */
+    color: #343a40;
+    /* Dark text color */
+    margin-bottom: 10px;
+    /* Space below each heading */
+}
+
+#about-company p {
+    color: #495057;
+    /* Text color for paragraphs */
+    margin-bottom: 20px;
+    /* Space below paragraphs */
+}
+
+
+/* Team Profiles */
+
+#about-company .row.text-center {
+    margin-top: 30px;
+    /* Space above team section */
+}
+
+#about-company img {
+    border: 2px solid #007bff;
+    /* Bootstrap primary color for borders */
+    transition: transform 0.3s;
+    /* Smooth scaling effect on hover */
+}
+
+#about-company img:hover {
+    transform: scale(1.1);
+    /* Scale image on hover */
+}
+
+#about-company h5 {
+    font-weight: bold;
+    /* Bold text for team member names */
+    margin-top: 10px;
+    /* Space above name */
+    margin-bottom: 5px;
+    /* Space below name */
+}
+
+
+/* Testimonials */
+
+blockquote {
+    border-left: 4px solid #007bff;
+    /* Stylish left border for testimonials */
+    padding-left: 20px;
+    /* Space between border and text */
+    margin-bottom: 30px;
+    /* Space below each testimonial */
+    background-color: #e9ecef;
+    /* Light gray background for quotes */
+    padding: 15px;
+    /* Padding for testimonials */
+    border-radius: 5px;
+    /* Rounded corners for testimonials */
+}
+
+blockquote p {
+    font-style: italic;
+    /* Italics for testimonial text */
+}
+
+
+/* Responsive Styles */
+
+@media (max-width: 768px) {
+    #about-company .row {
+        flex-direction: column;
+        /* Stack columns on small screens */
+        align-items: center;
+        /* Center items */
+    }
+    #about-company h2 {
+        font-size: 2rem;
+        /* Smaller font size for smaller screens */
+    }
+    #about-company h3 {
+        font-size: 1.5rem;
+        /* Smaller font size for subheadings */
+    }
+    #about-company h4 {
+        font-size: 1.25rem;
+        /* Smaller font size for mission and history */
+    }
+}
+
+
+/* Blog, Resources, and Virtual Tours Section */
+
+#resources {
+    background-color: #ffffff;
+    /* White background for clean look */
+    padding: 50px 0;
+    /* Padding for spacing */
+}
+
+#resources h2 {
+    font-size: 2.5rem;
+    /* Large font size for section title */
+    font-weight: bold;
+    /* Bold for emphasis */
+    color: #343a40;
+    /* Dark color for contrast */
+    margin-bottom: 40px;
+    /* Space below section title */
+}
+
+#resources h4 {
+    font-size: 1.75rem;
+    /* Medium-large font size for subheadings */
+    color: #007bff;
+    /* Bootstrap primary color for consistency */
+    margin-bottom: 20px;
+    /* Space below subheading */
+}
+
+#resources p {
+    color: #495057;
+    /* Darker gray for text readability */
+    margin-bottom: 20px;
+    /* Space below paragraphs */
+}
+
+
+/* Blog and Resources Links */
+
+#resources a.btn-link {
+    font-size: 1.1rem;
+    /* Slightly larger font size for link buttons */
+    color: #007bff;
+    /* Bootstrap primary color */
+    text-decoration: none;
+    /* Remove underline */
+    transition: color 0.3s ease-in-out;
+    /* Smooth transition for color change */
+}
+
+#resources a.btn-link:hover {
+    color: #0056b3;
+    /* Darker blue on hover */
+}
+
+
+/* Virtual Tours Section */
+
+#resources .card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+#resources .card:hover {
+    transform: translateY(-10px);
+    /* Slight lift on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* More pronounced shadow on hover */
+}
+
+#resources .card-img-top {
+    border-top-left-radius: 10px;
+    /* Matching rounded corners */
+    border-top-right-radius: 10px;
+}
+
+#resources .card-body {
+    padding: 20px;
+    /* Spacing inside the card */
+}
+
+#resources .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #343a40;
+    margin-bottom: 10px;
+}
+
+#resources .card-text {
+    font-size: 1rem;
+    color: #6c757d;
+    margin-bottom: 20px;
+}
+
+
+/* Responsive Styles */
+
+@media (max-width: 768px) {
+    #resources .row {
+        flex-direction: column;
+        /* Stack columns on smaller screens */
+    }
+    #resources h2 {
+        font-size: 2rem;
+        /* Reduce title size on small screens */
+    }
+    #resources h4 {
+        font-size: 1.5rem;
+        /* Reduce subheading size */
+    }
+    #resources .card {
+        margin-bottom: 30px;
+        /* Add spacing between stacked cards */
+    }
+}
+
+
+/* Footer Styles */
+
+footer {
+    background-color: #f8f9fa;
+    color: #343a40;
+    padding: 50px 0;
+    border-top: 1px solid #dee2e6;
+}
+
+footer h5 {
+    font-size: 18px;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+footer p,
+footer a {
+    color: #343a40;
+    font-size: 14px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+footer ul {
+    padding: 0;
+    list-style: none;
+}
+
+footer ul li {
+    margin-bottom: 10px;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: #343a40;
+}
+
+footer ul li a:hover {
+    color: #007bff;
+}
+
+
+/* Social Media Icons */
+
+footer .fab {
+    color: #343a40;
+    transition: color 0.3s ease;
+}
+
+footer .fab:hover {
+    color: #007bff;
+}
+
+
+/* Footer bottom */
+
+footer p {
+    margin-bottom: 0;
+}
+
+footer .col-md-3 {
+    margin-bottom: 30px;
+}
+
+
+/* Responsive adjustments */
+
+@media (max-width: 768px) {
+    footer .col-md-3 {
+        margin-bottom: 20px;
+    }
+    footer h5 {
+        font-size: 16px;
+    }
+    footer p,
+    footer a {
+        font-size: 13px;
+    }
+    footer .fab {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    footer {
+        text-align: center;
+    }
+    footer .row {
+        display: block;
+    }
+    footer .col-md-3 {
+        margin-bottom: 40px;
+    }
+}
